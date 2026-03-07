@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700;900&display=swap');
+
+@theme {
+  --color-gold-light: #F6D88C;
+  --color-gold: #B5863C;
+  --color-dark: #1D1D1D;
+  --color-dark-card: #242424;
+  --color-dark-lighter: #2E2E2E;
+
+  --font-lato: "Lato", sans-serif;
+  --font-greatvibes: "Great Vibes", cursive;
+}
+
+body {
+  background-color: #1D1D1D;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1D1D1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #B5863C;
+  border-radius: 3px;
+}
