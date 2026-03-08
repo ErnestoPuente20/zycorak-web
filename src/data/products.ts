@@ -1,0 +1,76 @@
+import type { Product } from "../types"
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Vaso Highball Refrescante',
+    category: 'uso-diario',
+    price: 95.00,
+    image: '/src/assets/images/products/vaso-highball.png',
+    variants: [
+      { label: '6 Unidades', value: 6, price: 95.00 },
+      { label: '12 Unidades', value: 12, price: 175.00 },
+    ],
+    specs: {
+      altura: '14 cm',
+      diametro: '7 cm',
+      grosor: '2.5 mm',
+      capacidad: '400 ml',
+    },
+    bestSeller: true,
+  },
+  {
+    id: 2,
+    name: 'Copa de Vino Elegante',
+    category: 'postreras',
+    price: 120.00,
+    image: '/src/assets/images/products/copa-vino.png',
+    variants: [
+      { label: '6 Unidades', value: 6, price: 40.00 },
+      { label: '12 Unidades', value: 12, price: 75.00 },
+    ],
+    specs: {
+      altura: '22 cm',
+      diametro: '8 cm',
+      grosor: '2 mm',
+      capacidad: '350 ml',
+    },
+    bestSeller: true,
+  },
+  {
+    id: 3,
+    name: 'Vaso Shot Mixología',
+    category: 'shots-mixologia',
+    price: 75.00,
+    image: '/src/assets/images/products/vaso-shot.png',
+    variants: [
+      { label: '6 Unidades', value: 6, price: 35.00 },
+      { label: '12 Unidades', value: 12, price: 88.00 },
+    ],
+    specs: {
+      altura: '8 cm',
+      diametro: '5 cm',
+      grosor: '3 mm',
+      capacidad: '60 ml',
+    },
+    bestSeller: true,
+  },
+  {
+    id: 4,
+    name: 'Decanter Crystal',
+    category: 'postreras',
+    price: 245.00,
+    image: '/src/assets/images/products/decanter.png',
+    variants: [
+      { label: '6 Unidades', value: 6, price: 66.00 },
+      { label: '12 Unidades', value: 12, price: 120.00 },
+    ],
+    specs: {
+      altura: '28 cm',
+      diametro: '12 cm',
+      grosor: '3 mm',
+      capacidad: '750 ml',
+    },
+    bestSeller: true,
+  },
+]
