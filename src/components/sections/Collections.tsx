@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'lucide-react'
 export default function Collections() {
   return (
     <section className='w-full py-20 bg-dark'>
-        <div className='max-w-7xl mx-auto px-8'>
+        <div className='max-w-7xl mx-auto'>
             <div className='flex flex-col items-center mb-12'>
                 <h2 className='text-white text-center font-lato tracking-[0.3em] text-lg mb-3'>
                     EXPLORA NUESTRAS COLECCIONES
@@ -41,6 +41,7 @@ export default function Collections() {
                                 Explorar <ArrowRightCircle size={18}/>
                             </Link>
                         </div>
+
                     </div>
                 ))}
             </div>
