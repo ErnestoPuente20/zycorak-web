@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4">
               <a 
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1E3QodwoKK/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-white/50 hover:text-gold-light transition-colors duration-300"
@@ -35,7 +35,7 @@ export default function Footer() {
                 />
               </a>
               <a 
-                href="https://tiktok.com"
+                href="https://www.tiktok.com/@zycorak?_r=1&_t=ZS-94NqDrsAHPI"
                 target="_blank"
                 rel="noreferrer"
                 className="text-white/50 hover:text-gold-light transition-colors duration-300"

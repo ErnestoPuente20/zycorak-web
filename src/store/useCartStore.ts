@@ -11,6 +11,10 @@ interface CartStore {
   isOpen: boolean
   toggleCart: () => void
   addItem: (product: Product, variant: ProductVariant) => void
+  removeItem: (id: number, variantLabel: string) => void
+  updateQuantity: (id: number, variantLabel: string, quantity: number) => void
+  getTotal: () => number
+  clearCart: () => void
 }
 
 const useCartStore = create<CartStore>((set, get) => ({
@@ -36,7 +40,34 @@ const useCartStore = create<CartStore>((set, get) => ({
     } else {
       set({items: [...items, {...product, variant, quantity: 1}]})
     }
-  }
+  },
+
+  removeItem: (id, variantLabel) => {
+    set({
+      items: get().items.filter(
+        (i) => !(i.id === id && i.variant.label === variantLabel)
+      )
+    })
+  },
+
+  updateQuantity: (id, variantLabel, quantity) => {
+    if (quantity < 1) return
+    set({
+      items: get().items.map((i) =>
+        i.id === id && i.variant.label === variantLabel
+          ? {...i, quantity}
+          : i
+      )
+    })
+  },
+
+  getTotal: () => {
+    return get().items.reduce(
+      (total, item) => total + item.variant.price * item.quantity, 0
+    )
+  },
+
+  clearCart: () => set({items: []})
 }))
 
 export default useCartStore
