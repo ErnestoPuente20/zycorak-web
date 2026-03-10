@@ -3,6 +3,7 @@ import { ShoppingCart } from 'lucide-react'
 import type { Product } from "../../types"
 import whatsappIcon from '../../assets/images/whatsapp.svg'
 import { categories } from "../../data/categories"
+import useCartStore from "../../store/useCartStore"
 
 interface ProductCardProps {
     product: Product
@@ -12,6 +13,8 @@ export default function ProductCard({ product }: ProductCardProps) {
     const [selectedVariant, setSelectedVariant] = useState(product.variants[0])
     const [isHovered, setIsHovered] = useState(false)
     const categoryName = categories.find(cat => cat.slug === product.category)?.name
+
+    const {addItem} = useCartStore()
 
     return (
         <div 
@@ -85,7 +88,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                 </div>
 
                 <div className="flex flex-col gap-3 mt-2">
-                    <button className='w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-linear-to-r from-gold-light to-gold text-dark font-lato font-black text-xs tracking-[0.2em] hover:brightness-110 active:scale-95 transition-all'>
+                    <button
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            addItem(product, selectedVariant)
+                        }} 
+                        className='w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-linear-to-r from-gold-light to-gold text-dark font-lato font-black text-xs tracking-[0.2em] hover:brightness-110 active:scale-95 transition-all'
+                    >
                         <ShoppingCart size={18} strokeWidth={2.5} />
                         AÑADIR AL CARRITO
                     </button>

@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
 import logo from '../../assets/images/logo.svg'
+import useCartStore from '../../store/useCartStore'
 
 const Navbar = () => {
+
+  const {toggleCart} = useCartStore()
+
   return (
     <nav className='fixed top-0 left-0 w-full bg-dark h-16 z-50 border-b border-dark-lighter'>
       <div className='flex h-full items-center max-w-7xl justify-between mx-auto'>
@@ -37,7 +41,10 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button className='text-white cursor-pointer'>
+        <button 
+          onClick={toggleCart}
+          className='text-white cursor-pointer hover:text-gold-light transition-colors duration-300'
+        >
           <ShoppingCart size={24}/>
         </button>
       </div>

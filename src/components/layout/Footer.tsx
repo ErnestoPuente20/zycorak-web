@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Facebook } from "lucide-react"
+import facebookIcon from '../../assets/images/facebook.svg'
 import logo from '../../assets/images/logo-blanco.svg'
 import tiktokIcon from '../../assets/images/tiktok.svg'
 import whatsappIcon from '../../assets/images/whatsapp.svg'
@@ -7,18 +7,18 @@ import { categories } from "../../data/categories"
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-dark border-t border-white/10 py-16">
-      <div className="max-w-7xl mx-auto">
+    <footer className="w-full bg-dark border-t border-white/10 py-10">
+      <div className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-4 gap-12">
 
           {/* Columna 1 logo y redes */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             <img 
               src={logo}
               alt="Zycorak"
-              className="h-12 w-auto" 
+              className="h-14 w-auto self-start" 
             />
-            <p className="text-white/50 font-lato text-sm leading-relaxed">
+            <p className="text-white/50 font-lato text-md leading-relaxed italic">
               Elegancia y calidad en cada cristal
             </p>
             <div className="flex items-center gap-4">
@@ -28,7 +28,11 @@ export default function Footer() {
                 rel="noreferrer"
                 className="text-white/50 hover:text-gold-light transition-colors duration-300"
               >
-                <Facebook size={20}/>
+                <img 
+                  src={facebookIcon} 
+                  alt="Facebook"
+                  className="w-5 h-5 brightness-0 invert opacity-50 hover:opacity-100 transition-all" 
+                />
               </a>
               <a 
                 href="https://tiktok.com"
@@ -48,7 +52,7 @@ export default function Footer() {
           {/* Columna 2 categorias */}
           <div className="flex flex-col gap-4">
             <h4 className="text-white font-lato font-bold text-sm tracking-widest">
-              Categorias
+              CATEGORÍAS
             </h4>
             <div className="flex flex-col gap-3">
               {categories.map((cat) => (
@@ -97,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* Línea divisora y copyright */}
-        <div className='border-t border-white/10 mt-12 pt-6 flex items-center justify-between'>
+        <div className='border-t border-white/10 mt-8 pt-4 flex items-center justify-between'>
           <p className='text-white/30 font-lato text-xs'>
             © 2026 ZYCORAK. TODOS LOS DERECHOS RESERVADOS.
           </p>
