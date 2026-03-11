@@ -2,6 +2,8 @@ import { Trash2, X } from "lucide-react"
 import useCartStore from "../../store/useCartStore"
 import whatsappIcon from "../../assets/images/whatsapp.svg"
 
+import { sendCartWhatsApp } from "../../utils/whatsapp"
+
 export default function CartDrawer() {
 
   const {items, isOpen, toggleCart, removeItem, updateQuantity, getTotal, clearCart} = useCartStore()
@@ -132,7 +134,14 @@ export default function CartDrawer() {
             </div>
 
             {/* Boton Whatsapp */}
-            <button className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-lato font-bold text-xs tracking-widest transition-colors duration-300">
+            <button 
+              onClick={() => {
+                sendCartWhatsApp(items, getTotal())
+                clearCart()
+                toggleCart()
+              }}
+              className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-lato font-bold text-xs tracking-widest transition-colors duration-300"
+            >
               <img 
                 src={whatsappIcon} 
                 alt="Whatsapp"

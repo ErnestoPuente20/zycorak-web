@@ -5,6 +5,8 @@ import whatsappIcon from '../../assets/images/whatsapp.svg'
 import { categories } from "../../data/categories"
 import useCartStore from "../../store/useCartStore"
 
+import { sendProductWhatsApp } from "../../utils/whatsapp"
+
 interface ProductCardProps {
     product: Product
 }
@@ -100,7 +102,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                     </button>
 
                     {/* 1. Botón WhatsApp Mejorado */}
-                    <button className='w-full flex items-center justify-center gap-3 py-4 rounded-2xl border-2 border-white/20 text-white/80 font-lato font-bold text-xs tracking-[0.15em] transition-all duration-300 hover:border-gold-light hover:text-gold-light hover:bg-gold-light/5 group/wa'>
+                    <button 
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            sendProductWhatsApp(product.name, selectedVariant.label, selectedVariant.price)
+                        }}
+                        className='w-full flex items-center justify-center gap-3 py-4 rounded-2xl border-2 border-white/20 text-white/80 font-lato font-bold text-xs tracking-[0.15em] transition-all duration-300 hover:border-gold-light hover:text-gold-light hover:bg-gold-light/5 group/wa'
+                    >
                         <img 
                             src={whatsappIcon} 
                             alt="Wpp" 
