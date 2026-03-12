@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion'
 import {Link} from 'react-router-dom'
 import { categories } from '../../data/categories'
 import { ArrowRightCircle } from 'lucide-react'
@@ -6,17 +7,30 @@ export default function Collections() {
   return (
     <section className='w-full py-20 bg-dark'>
         <div className='max-w-7xl mx-auto'>
-            <div className='flex flex-col items-center mb-12'>
+
+            {/* Titulo */}
+            <motion.div
+                initial={{opacity: 0, y: 20}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{duration: 0.7}} 
+                className='flex flex-col items-center mb-16'
+            >
                 <h2 className='text-white text-center font-lato tracking-[0.3em] text-lg mb-3'>
                     EXPLORA NUESTRAS COLECCIONES
                 </h2>
                 <div className='w-16 h-0.5 bg-gold-light' />
-            </div>
+            </motion.div>
 
+            {/* Cards */}
             <div className='flex gap-6 justify-center'>
-                {categories.map((cat) => (
-                    <div
+                {categories.map((cat, index) => (
+                    <motion.div
                         key={cat.id}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: index * 0.2 }}
                         className='relative overflow-hidden cursor-pointer w-98 h-125 rounded-2xl flex flex-col items-center justify-center'
                     >
                         <img 
@@ -42,7 +56,7 @@ export default function Collections() {
                             </Link>
                         </div>
 
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

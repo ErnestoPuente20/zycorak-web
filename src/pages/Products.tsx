@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import {motion} from 'framer-motion'
 import { useSearchParams } from "react-router-dom"
 import { products } from "../data/products"
 import ProductCard from "../components/ui/ProductCard"
@@ -27,24 +28,39 @@ export default function Products() {
       <div className="max-w-7xl mx-auto px-8 py-16">
 
         {/* Titulo */}
-        <div className="flex flex-col items-center mb-4">
+        <motion.div 
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.7}}
+          className="flex flex-col items-center mb-4"
+        >
           <h1 className="font-greatvibes text-gold-light text-7xl mb-3">
             Nuestra Coleccion de Cristal
           </h1>
           <p className='text-white/50 font-lato text-md text-center max-w-md'>
             Piezas seleccionadas para elevar cada brindis. Desde el uso cotidiano hasta celebraciones especiales, encuentra el diseño que mejor se adapte a tu mesa.
           </p>
-        </div>
+        </motion.div>
 
         {/* Linea Dorada */}
-        <div className="flex justify-center mb-12">
+        <motion.div 
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.6, delay: 0.4}}
+          className="flex justify-center mb-12"
+        >
           <div className="w-16 h-0.5 bg-gold-light"/>
-        </div>
+        </motion.div>
 
         {/* Filtros */}
-        <div className="flex justify-center mb-12">
+        <motion.div
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.6, delay: 0.4}} 
+          className="flex justify-center mb-12"
+        >
           <CategoryFilter selected={selected} onSelect={setSelected}/>
-        </div>
+        </motion.div>
 
         {/* Grid de productos */}
         {filtered.length === 0 ? (
@@ -52,11 +68,24 @@ export default function Products() {
             No hay productos en esta categoria
           </p>
         ) : (
-          <div className="grid grid-cols-4 gap-6">
-            {filtered.map((product) => (
-              <ProductCard key={product.id} product={product}/>
+          <motion.div 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{duration: 0.5, delay: 0.5}}
+            className="grid grid-cols-4 gap-6"
+          >
+            {filtered.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{opacity: 0, y: 30}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5, delay: index * 0.1}}
+              >
+                <ProductCard product={product}/>
+              </motion.div>
+              
             ))}
-          </div>
+          </motion.div>
         )}
 
       </div>

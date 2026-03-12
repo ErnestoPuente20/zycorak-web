@@ -1,10 +1,10 @@
 import { useState } from "react"
+import {motion, AnimatePresence} from "framer-motion"
 import { ShoppingCart } from 'lucide-react'
 import type { Product } from "../../types"
 import whatsappIcon from '../../assets/images/whatsapp.svg'
 import { categories } from "../../data/categories"
 import useCartStore from "../../store/useCartStore"
-
 import { sendProductWhatsApp } from "../../utils/whatsapp"
 
 interface ProductCardProps {
@@ -19,8 +19,10 @@ export default function ProductCard({ product }: ProductCardProps) {
     const {addItem} = useCartStore()
 
     return (
-        <div 
-            className='bg-dark-card rounded-3xl overflow-hidden flex flex-col transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] border border-white/10 group'
+        <motion.div 
+            whileHover={{ y: -6 }}
+            transition={{ duration: 0.3 }}
+            className='bg-dark-card rounded-3xl overflow-hidden flex flex-col hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] border border-white/10 group'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             /* 3. Solución para Móvil: Al hacer tap, se activa el hover en la mayoría de navegadores */
@@ -39,20 +41,30 @@ export default function ProductCard({ product }: ProductCardProps) {
                     {categoryName}
                 </span>
 
-                {/* 4. Ficha Técnica más grande y legible */}
-                <div className={`absolute inset-0 bg-dark/90 backdrop-blur-lg flex flex-col items-center justify-center gap-6 px-8 transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-                    <p className="text-gold-light text-xs tracking-[0.4em] font-bold uppercase border-b border-gold-light/30 pb-2">
-                        Especificaciones
-                    </p>
-                    <div className="w-full space-y-4">
-                        {Object.entries(product.specs).map(([key, value]) => (
-                            <div key={key} className="flex justify-between items-center w-full border-b border-white/5 pb-2">
-                                <span className="text-white/40 capitalize text-sm">{key}</span>
-                                <span className="text-white font-bold text-base">{value}</span>
+                {/* Overlay specs con AnimatePresence */}
+                <AnimatePresence>
+                    {isHovered && (
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className='absolute inset-0 bg-dark/90 backdrop-blur-lg flex flex-col items-center justify-center gap-6 px-8'
+                        >
+                            <p className="text-gold-light text-xs tracking-[0.4em] font-bold uppercase border-b border-gold-light/30 pb-2">
+                                Especificaciones
+                            </p>
+                            <div className="w-full space-y-4">
+                                {Object.entries(product.specs).map(([key, value]) => (
+                                    <div key={key} className="flex justify-between items-center w-full border-b border-white/5 pb-2">
+                                        <span className="text-white/40 capitalize text-sm">{key}</span>
+                                        <span className="text-white font-bold text-base">{value}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-                </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
 
             {/* Info del producto */}
@@ -118,6 +130,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                     </button>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

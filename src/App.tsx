@@ -4,10 +4,12 @@ import Products from './pages/Products'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import CartDrawer from './components/layout/CartDrawer'
+import ScrollToTop from './components/layout/ScrollToTop'
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Navbar />
       <CartDrawer/>
       <Routes>

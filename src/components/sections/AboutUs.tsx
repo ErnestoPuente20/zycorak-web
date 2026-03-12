@@ -1,4 +1,6 @@
+import {motion} from 'framer-motion'
 import { Globe, PlusCircle, Sparkles, type LucideIcon } from "lucide-react"
+import nosotrosImg from '../../assets/images/nosotros.png'
 
 interface Feature {
     title: string
@@ -18,30 +20,50 @@ export default function AboutUs() {
     <section id="nosotros" className="w-full py-20 bg-dark-about">
         <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 gap-16 items-center">
+
                 {/* Imagen izquierda */}
-                <img 
-                    src="/src/assets/images/nosotros.png" 
-                    alt="Zycorak"
-                    className="w-full h-125 object-cover rounded-2xl" 
-                />
+                <motion.div
+                    initial={{opacity: 0, x: -50}}
+                    whileInView={{opacity: 1, x: 0}}
+                    viewport={{once: true, amount: 0.2}}
+                    transition={{duration: 0.8}}
+                >
+                    <img 
+                        src={nosotrosImg}
+                        alt="Nosotros"
+                        className="w-full h-125 object-cover rounded-2xl" 
+                    />
+                </motion.div>
 
                 {/* Contenido derecha */}
                 <div className="flex flex-col gap-6">
-                    <span className="font-greatvibes text-gold-light text-3xl">
-                        Conócenos
-                    </span>
-                    <h2 className="text-white font-lato font-bold text-4xl leading-tight">
-                        Calidad que trasciende fronteras
-                    </h2>
-                    <p className="text-white/60 font-lato text-base leading-relaxed">
-                        En Zycorak, seleccionamos cuidadosamente cada pieza alrededor del mundo para asegurar que solo lo mejor llegue a tu hogar. Lo que comenzó como una pasión por la cristalería fina se convirtió en el inicio de nuestra búsqueda por transformar tus espacios con elegancia y durabilidad.
-                    </p>
+
+                    <motion.div
+                        initial={{opacity: 0, x: 50}}
+                        whileInView={{opacity: 1, x: 0}}
+                        viewport={{once: true, amount: 0.2}}
+                        transition={{duration: 0.8}}
+                    >
+                        <span className="font-greatvibes text-gold-light text-3xl">
+                            Conócenos
+                        </span>
+                        <h2 className="text-white font-lato font-bold text-4xl leading-tight">
+                            Calidad que trasciende fronteras
+                        </h2>
+                        <p className="text-white/60 font-lato text-base leading-relaxed">
+                            En Zycorak, seleccionamos cuidadosamente cada pieza alrededor del mundo para asegurar que solo lo mejor llegue a tu hogar. Lo que comenzó como una pasión por la cristalería fina se convirtió en el inicio de nuestra búsqueda por transformar tus espacios con elegancia y durabilidad.
+                        </p>
+                    </motion.div>
 
                     {/* Features */}
                     <div className="flex flex-col gap-6 mt-2">
-                        {features.map((item) => (
-                            <div
+                        {features.map((item, index) => (
+                            <motion.div
                                 key={item.title}
+                                initial={{opacity: 0, x: 50}}
+                                whileInView={{opacity: 1, x: 0}}
+                                viewport={{once: true, amount: 0.2}}
+                                transition={{duration: 0.6, delay: index * 0.15}}
                                 className="flex items-start gap-4"
                             >
                                 <div className="w-9 h-9 rounded-full bg-gold-light/20 flex items-center justify-center shrink-0 mt-1">
@@ -55,7 +77,7 @@ export default function AboutUs() {
                                         {item.desc}
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

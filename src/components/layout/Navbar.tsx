@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { ShoppingCart } from 'lucide-react'
 import logo from '../../assets/images/logo.svg'
 import useCartStore from '../../store/useCartStore'
@@ -7,6 +7,23 @@ const Navbar = () => {
 
   const {toggleCart, items} = useCartStore()
   const totalItems = items.reduce((total, item) => total + item.quantity, 0)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const scrollToSection  = (id: string) => {
+    //Si ya estamos en el home hacemos scroll directo
+    if (location.pathname === '/') {
+      const section = document.getElementById(id)
+      section?.scrollIntoView({behavior: 'smooth'})
+    } else {
+      //Si estamos en otra pagina navegamos al home primero
+      navigate('/')
+      setTimeout(() => {
+        const section = document.getElementById(id)
+        section?.scrollIntoView({behavior: 'smooth'})
+      }, 100)
+    }
+  }
 
   return (
     <nav className='fixed top-0 left-0 w-full bg-dark h-16 z-50 border-b border-dark-lighter'>
@@ -30,15 +47,21 @@ const Navbar = () => {
               PRODUCTOS
             </Link>
           </li>
-          <li>
-            <Link to='/#nosotros' className='text-white text-sm tracking-[0.2em] hover:text-gold-light transition-colors duration-300'>
+           <li>
+            <button
+              onClick={() => scrollToSection('nosotros')}
+              className='text-white text-sm tracking-[0.2em] hover:text-gold-light transition-colors duration-300'
+            >
               NOSOTROS
-            </Link>
+            </button>
           </li>
           <li>
-            <Link to='/#contacto' className='text-white text-sm tracking-[0.2em] hover:text-gold-light transition-colors duration-300'>
+            <button
+              onClick={() => scrollToSection('contacto')}
+              className='text-white text-sm tracking-[0.2em] hover:text-gold-light transition-colors duration-300'
+            >
               CONTACTO
-            </Link>
+            </button>
           </li>
         </ul>
 
