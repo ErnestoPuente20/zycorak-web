@@ -19,7 +19,7 @@ export default function CartDrawer() {
       />
 
       {/* Panel del carrito */}
-      <div className="fixed top-0 right-0 h-full w-96 bg-dark-card z-50 flex flex-col">
+      <div className='fixed top-0 right-0 h-full w-full md:w-96 bg-dark-card z-50 flex flex-col'>
         {/* Header */}
         <div className='flex items-center justify-between p-6 border-b border-white/10'>
           <div>

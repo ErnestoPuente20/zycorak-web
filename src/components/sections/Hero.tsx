@@ -11,7 +11,7 @@ export default function Hero() {
         {/* Overlay oscuro */}
         <div className='absolute inset-0 bg-black/10'/>
 
-        <div className='relative text-center flex flex-col items-center justify-center'>
+        <div className='relative text-center flex flex-col items-center justify-center px-6'>
 
             {/* Linea decorativa arriba */}
             <motion.div
@@ -26,7 +26,7 @@ export default function Hero() {
                 initial={{opacity: 0, y: 30}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.8, delay: 0.4}}
-                className='font-greatvibes text-8xl mb-4 text-gold-light'
+                className='font-greatvibes text-5xl md:text-7xl lg:text-8xl mb-4 text-gold-light'
             >
                 Elegancia en cada sorbo
             </motion.h1>
@@ -36,7 +36,7 @@ export default function Hero() {
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: 1, y: 0}}
                 transition={{duration: 0.8, delay: 0.7}}
-                className='font-lato text-white text-2xl mb-10 tracking-[0.2em]'
+                className='font-lato text-white text-sm md:text-xl lg:text-2xl mb-10 tracking-[0.2em]'
             >
                 CRISTALERIA DE ALTA CALIDAD
             </motion.p>
@@ -49,7 +49,7 @@ export default function Hero() {
             >
                 <Link 
                     to='/productos' 
-                    className='px-10 py-4 bg-linear-to-r from-gold-light to-gold rounded-full font-bold text-sm tracking-widest text-black hover:brightness-110 transition-all duration-300 shadow-lg'
+                    className='px-8 md:px-10 py-3 md:py-4 bg-linear-to-r from-gold-light to-gold rounded-full font-bold text-xs md:text-sm tracking-widest text-black hover:brightness-110 transition-all duration-300 shadow-lg'
                 >
                     EXPLORAR CATÁLOGO
                 </Link>

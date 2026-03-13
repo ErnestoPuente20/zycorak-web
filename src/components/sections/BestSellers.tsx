@@ -9,7 +9,7 @@ export default function BestSellers() {
 
     return (
         <section className="w-full py-20 bg-dark-section">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto px-6">
                 {/* Titulo */}
                 <motion.div 
                     initial={{opacity: 0, y: 20}}
@@ -25,7 +25,7 @@ export default function BestSellers() {
                 </motion.div>
 
                 {/* Grid de Productos */}
-                <div className="grid grid-cols-4 gap-4 justify-items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
                     {bestSellers.map((product, index) => (
                         <motion.div
                             key={product.id}
@@ -33,10 +33,9 @@ export default function BestSellers() {
                             whileInView={{opacity: 1, y: 0}}
                             viewport={{once: true, amount: 0.2}}
                             transition={{duration: 0.6, delay: index * 0.15}}
+                            className='w-full'
                         >
-                            <ProductCard
-                                product={product}
-                            />
+                            <ProductCard product={product}/>
                         </motion.div>
                     ))}
                 </div>

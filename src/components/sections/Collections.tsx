@@ -6,7 +6,7 @@ import { ArrowRightCircle } from 'lucide-react'
 export default function Collections() {
   return (
     <section className='w-full py-20 bg-dark'>
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto px-6'>
 
             {/* Titulo */}
             <motion.div
@@ -23,7 +23,7 @@ export default function Collections() {
             </motion.div>
 
             {/* Cards */}
-            <div className='flex gap-6 justify-center'>
+            <div className='flex flex-col md:flex-row gap-6 justify-center items-center'>
                 {categories.map((cat, index) => (
                     <motion.div
                         key={cat.id}
@@ -31,7 +31,7 @@ export default function Collections() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.2 }}
-                        className='relative overflow-hidden cursor-pointer w-98 h-125 rounded-2xl flex flex-col items-center justify-center'
+                        className='relative overflow-hidden cursor-pointer w-full md:w-80 lg:w-98 h-72 md:h-96 lg:h-125 rounded-2xl flex flex-col items-center justify-center'
                     >
                         <img 
                             src={cat.image} 
@@ -39,9 +39,7 @@ export default function Collections() {
                             className='w-full h-full object-cover object-center'
                         />
 
-                        <div 
-                            className='absolute inset-0 bg-linear-to-t from-black/85 to-black/20'
-                        />
+                        <div className='absolute inset-0 bg-linear-to-t from-black/85 to-black/20'/>
 
                         {/* Contenido */}
                         <div className='absolute inset-0 flex flex-col items-center justify-center gap-4 p-8'>

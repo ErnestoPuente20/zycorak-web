@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import CartDrawer from './components/layout/CartDrawer'
 import ScrollToTop from './components/layout/ScrollToTop'
+import FloatingCart from './components/ui/FloatingCart'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <ScrollToTop/>
       <Navbar />
       <CartDrawer/>
+      <FloatingCart/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Products />} />
