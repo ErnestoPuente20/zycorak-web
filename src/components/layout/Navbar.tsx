@@ -91,7 +91,7 @@ const Navbar = () => {
 
       {/* Menú móvil */}
       {menuOpen && (
-        <div className='md:hidden bg-dark border-t border-dark-lighter px-6 py-6 flex flex-col gap-6'>
+        <div className='md:hidden w-full bg-dark border-t border-dark-lighter px-6 py-6 flex flex-col gap-6'>
           <Link
             to='/'
             onClick={() => setMenuOpen(false)}
