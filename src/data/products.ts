@@ -6,7 +6,7 @@ export const products: Product[] = [
     name: 'Vaso Highball Refrescante',
     category: 'uso-diario',
     price: 95.00,
-    image: '/src/assets/images/products/vaso-highball.png',
+    image: '/images/products/vaso-highball.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 95.00 },
       { label: '12 Unidades', value: 12, price: 175.00 },
@@ -24,7 +24,7 @@ export const products: Product[] = [
     name: 'Copa de Vino Elegante',
     category: 'postreras',
     price: 120.00,
-    image: '/src/assets/images/products/copa-vino.png',
+    image: '/images/products/copa-vino.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 40.00 },
       { label: '12 Unidades', value: 12, price: 75.00 },
@@ -42,7 +42,7 @@ export const products: Product[] = [
     name: 'Vaso Shot Mixología',
     category: 'shots-mixologia',
     price: 75.00,
-    image: '/src/assets/images/products/vaso-shot.png',
+    image: '/images/products/vaso-shot.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 35.00 },
       { label: '12 Unidades', value: 12, price: 88.00 },
@@ -60,7 +60,7 @@ export const products: Product[] = [
     name: 'Decanter Crystal',
     category: 'postreras',
     price: 245.00,
-    image: '/src/assets/images/products/decanter.png',
+    image: '/images/products/decanter.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 66.00 },
       { label: '12 Unidades', value: 12, price: 120.00 },
@@ -78,7 +78,7 @@ export const products: Product[] = [
     name: 'Postrera Uno',
     category: 'postreras',
     price: 245.00,
-    image: '/src/assets/images/products/postrera1.jpg',
+    image: '/images/products/postrera1.jpg',
     variants: [
       { label: '6 Unidades', value: 6, price: 78.00 },
       { label: '12 Unidades', value: 12, price: 210.00 },
@@ -96,7 +96,7 @@ export const products: Product[] = [
     name: 'Shot Tequila',
     category: 'shots-mixologia',
     price: 245.00,
-    image: '/src/assets/images/products/shot1.jpg',
+    image: '/images/products/shot1.jpg',
     variants: [
       { label: '6 Unidades', value: 6, price: 12.00 },
       { label: '12 Unidades', value: 12, price: 23.00 },
@@ -114,7 +114,7 @@ export const products: Product[] = [
     name: 'Diario cristal',
     category: 'uso-diario',
     price: 245.00,
-    image: '/src/assets/images/products/vaso-comun2.jpg',
+    image: '/images/products/vaso-comun2.jpg',
     variants: [
       { label: '6 Unidades', value: 6, price: 19.00 },
       { label: '12 Unidades', value: 12, price: 45.00 },
@@ -132,7 +132,7 @@ export const products: Product[] = [
     name: 'Vaso Lujo',
     category: 'uso-diario',
     price: 245.00,
-    image: '/src/assets/images/products/vaso-comun.jpg',
+    image: '/images/products/vaso-comun.jpg',
     variants: [
       { label: '6 Unidades', value: 6, price: 14.00 },
       { label: '12 Unidades', value: 12, price: 28.00 },
