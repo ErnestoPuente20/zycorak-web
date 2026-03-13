@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import {motion} from 'framer-motion'
 import { Globe, PlusCircle, Sparkles, type LucideIcon } from "lucide-react"
 import nosotrosImg from '../../assets/images/nosotros.png'
@@ -9,6 +10,12 @@ interface Feature {
 }
 
 export default function AboutUs() {
+
+    const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= 768)
+
+    useEffect(() => {
+        setIsDesktop(window.innerWidth >= 768)
+    }, [])
 
     const features: Feature[] = [
         {title: 'Selección curada', desc: 'Elegimos cada pieza bajo estrictos estándares de calidad.', icon: Sparkles},
@@ -23,7 +30,7 @@ export default function AboutUs() {
 
                 {/* Imagen */}
                 <motion.div
-                    initial={{opacity: 0, x: -50}}
+                    initial={{opacity: 0, x: isDesktop ? -50 : 0}}
                     whileInView={{opacity: 1, x: 0}}
                     viewport={{once: true, amount: 0.2}}
                     transition={{duration: 0.8}}
@@ -39,7 +46,7 @@ export default function AboutUs() {
                 <div className="flex flex-col gap-6">
 
                     <motion.div
-                        initial={{opacity: 0, x: 50}}
+                        initial={{opacity: 0, x: isDesktop ? 50 : 0}}
                         whileInView={{opacity: 1, x: 0}}
                         viewport={{once: true, amount: 0.2}}
                         transition={{duration: 0.8}}
@@ -60,7 +67,7 @@ export default function AboutUs() {
                         {features.map((item, index) => (
                             <motion.div
                                 key={item.title}
-                                initial={{opacity: 0, x: 50}}
+                                initial={{opacity: 0, x: isDesktop ? 50 : 0}}
                                 whileInView={{opacity: 1, x: 0}}
                                 viewport={{once: true, amount: 0.2}}
                                 transition={{duration: 0.6, delay: index * 0.15}}
