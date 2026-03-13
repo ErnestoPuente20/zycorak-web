@@ -15,12 +15,15 @@
   --font-greatvibes: "Great Vibes", cursive;
 }
 
-html, body {
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
   background-color: #1D1D1D;
   color: #ffffff;
   font-family: "Lato", sans-serif;
-  overflow-x: hidden;
-  max-width: 100%;
 }
 
 /* Scrollbar personalizado */
