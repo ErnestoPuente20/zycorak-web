@@ -1,7 +1,6 @@
 export interface ProductSpec {
   altura: string
   diametro: string
-  grosor: string
   capacidad: string
 }
 
