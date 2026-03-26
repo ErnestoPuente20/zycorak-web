@@ -73,7 +73,7 @@ export default function Footer() {
               ¿Necesitas ayuda?
             </h4>
             <a 
-              href=""
+              href="https://wa.me/59160103912"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 bg-green-600 hover:bg-green-500 transition-colors duration-300 text-white font-lato font-bold text-xs tracking-widest px-4 py-3 rounded-lg w-fit"
