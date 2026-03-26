@@ -23,7 +23,7 @@ export const products: Product[] = [
     name: 'Shot clasico',
     category: 'shots-mixologia',
     price: 33.00,
-    image: '/public/images/products/SHOT_CLASICO.png',
+    image: '/images/products/SHOT_CLASICO.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 33.00 },
       { label: '12 Unidades', value: 12, price: 65.00 },
@@ -40,7 +40,7 @@ export const products: Product[] = [
     name: 'Vaso Mediano Piña',
     category: 'uso-diario',
     price: 53.00,
-    image: '/public/images/products/VASO-MEDIANO-PIÑA.png',
+    image: '/images/products/VASO-MEDIANO-PIÑA.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 53.00 },
       { label: '12 Unidades', value: 12, price: 105.00 },
@@ -57,7 +57,7 @@ export const products: Product[] = [
     name: 'Vaso Alto Clasico',
     category: 'uso-diario',
     price: 43.00,
-    image: '/public/images/products/VASO-ALTO-CLASICO.png',
+    image: '/images/products/VASO-ALTO-CLASICO.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 43.00 },
       { label: '12 Unidades', value: 12, price: 86.00 },
@@ -74,7 +74,7 @@ export const products: Product[] = [
     name: 'Vaso Ancho piña',
     category: 'uso-diario',
     price: 63.00,
-    image: '/public/images/products/VASO-ANCHO-PIÑA.png',
+    image: '/images/products/VASO-ANCHO-PIÑA.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 63.00 },
       { label: '12 Unidades', value: 12, price: 125.00 },
@@ -91,7 +91,7 @@ export const products: Product[] = [
     name: 'Vaso Alto Cuadrado',
     category: 'uso-diario',
     price: 48.00,
-    image: '/public/images/products/VASO-ALTO-CUADRADO.png',
+    image: '/images/products/VASO-ALTO-CUADRADO.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 48.00 },
       { label: '12 Unidades', value: 12, price: 95.00 },
@@ -108,7 +108,7 @@ export const products: Product[] = [
     name: 'Vaso Medio Clasico',
     category: 'uso-diario',
     price: 38.00,
-    image: '/public/images/products/VASO-MEDIANO-CLASICO.png',
+    image: '/images/products/VASO-MEDIANO-CLASICO.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 38.00 },
       { label: '12 Unidades', value: 12, price: 75.00 },
@@ -125,7 +125,7 @@ export const products: Product[] = [
     name: 'Vaso Alto Diseño',
     category: 'uso-diario',
     price: 70.00,
-    image: '/public/images/products/VASO-ALTO-DISEÑO.png',
+    image: '/images/products/VASO-ALTO-DISEÑO.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 70.00 },
       { label: '12 Unidades', value: 12, price: 140.00 },
@@ -142,7 +142,7 @@ export const products: Product[] = [
     name: 'Vaso Octagonal',
     category: 'uso-diario',
     price: 48.00,
-    image: '/public/images/products/VASO-LARGO-OCTAGONAL.png',
+    image: '/images/products/VASO-LARGO-OCTAGONAL.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 48.00 },
       { label: '12 Unidades', value: 12, price: 95.00 },
