@@ -97,7 +97,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 <div className="flex items-center justify-between">
                     <span className="text-white font-lato font-black text-3xl">
-                        ${selectedVariant.price.toFixed(2)}
+                        Bs {selectedVariant.price.toFixed(2)}
                     </span>
                 </div>
 
