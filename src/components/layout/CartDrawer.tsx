@@ -111,7 +111,7 @@ export default function CartDrawer() {
 
                     {/* Precio */}
                     <p className='text-gold-light font-lato font-bold text-sm'>
-                      ${(item.variant.price * item.quantity).toFixed(2)}
+                      Bs {(item.variant.price * item.quantity)}
                     </p>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function CartDrawer() {
                 TOTAL
               </span>
               <span className="text-gold-light font-lato font-bold text-2xl">
-                ${getTotal().toFixed(2)}
+                Bs {getTotal()}
               </span>
             </div>
 

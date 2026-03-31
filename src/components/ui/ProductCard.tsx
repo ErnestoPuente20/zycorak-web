@@ -97,7 +97,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
                 <div className="flex items-center justify-between">
                     <span className="text-white font-lato font-black text-3xl">
-                        Bs {selectedVariant.price.toFixed(2)}
+                        Bs {selectedVariant.price}
                     </span>
                 </div>
 
@@ -113,7 +113,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                         AÑADIR AL CARRITO
                     </button>
 
-                    {/* 1. Botón WhatsApp Mejorado */}
+                    {/* 1. Botón WhatsApp */}
                     <button 
                         onClick={(e) => {
                             e.stopPropagation()
