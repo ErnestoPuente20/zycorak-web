@@ -157,7 +157,7 @@ export const products: Product[] = [
   {
     id: 10,
     name: 'Vaso Whisky Puntas',
-    category: 'whisky',
+    category: 'uso-diario',
     price: 65.00,
     image: '/images/products/VASO-WHISKY-PUNTAS.png',
     variants: [
@@ -174,7 +174,7 @@ export const products: Product[] = [
   {
     id: 11,
     name: 'Vaso Whisky Diseño',
-    category: 'whisky',
+    category: 'uso-diario',
     price: 63.00,
     image: '/images/products/VASO-WHISKY-DISEÑO.png',
     variants: [
@@ -191,7 +191,7 @@ export const products: Product[] = [
   {
     id: 12,
     name: 'Vaso Whisky Oblicuo',
-    category: 'shots-mixologia',
+    category: 'uso-diario',
     price: 50.00,
     image: '/images/products/VASO-WHISKY-OBLICUO.png',
     variants: [
@@ -208,7 +208,7 @@ export const products: Product[] = [
   {
     id: 13,
     name: 'Vaso Whisky Asimetrico',
-    category: 'shots-mixologia',
+    category: 'uso-diario',
     price: 55.00,
     image: '/images/products/VASO-WHISKY-ASIMETRICO.png',
     variants: [
@@ -225,7 +225,7 @@ export const products: Product[] = [
   {
     id: 14,
     name: 'Vaso Whisky Rombos Abajo',
-    category: 'shots-mixologia',
+    category: 'uso-diario',
     price: 63.00,
     image: '/images/products/VASO-WHISKY-ROMBOS-ABAJO.png',
     variants: [
@@ -242,7 +242,7 @@ export const products: Product[] = [
   {
     id: 15,
     name: 'Vaso Whisy Octagonal',
-    category: 'whisky',
+    category: 'uso-diario',
     price: 50.00,
     image: '/images/products/VASO-WHISKY-OCTAGONAL.png',
     variants: [
