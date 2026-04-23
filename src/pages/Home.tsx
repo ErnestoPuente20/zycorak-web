@@ -3,6 +3,7 @@ import AboutUs from "../components/sections/AboutUs";
 import BestSellers from "../components/sections/BestSellers";
 import Collections from "../components/sections/Collections";
 import Hero from "../components/sections/Hero";
+import Regalo from "../components/sections/Regalo";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
 
       <main>
           <Hero/>
+          <Regalo/>
           <Collections/>
           <BestSellers/>
           <AboutUs/>

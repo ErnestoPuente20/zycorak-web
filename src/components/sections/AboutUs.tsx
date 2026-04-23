@@ -24,7 +24,7 @@ export default function AboutUs() {
     ]
 
   return (
-    <section id="nosotros" className="w-full py-20 bg-dark-about">
+    <section id="nosotros" className="w-full py-20 bg-dark-about overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
 
