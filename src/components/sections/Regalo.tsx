@@ -52,7 +52,7 @@ export default function Regalo() {
                 });
 
                 //Preparamos mensaje de whatsapp
-                const numeroCel = "59160103912"
+                const numeroCel = "59167021196"
                 const texto = `¡Hola! Soy ${formData.nombre}. Acabo de ganar el premio de TikTok con el código ${formData.codigo}. Mi celular es ${formData.celular}.`;
                 const urlWa = `https://wa.me/${numeroCel}?text=${encodeURIComponent(texto)}`;
 

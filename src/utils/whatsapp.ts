@@ -1,6 +1,6 @@
 import type { CartItem } from "../store/useCartStore";
 
-const WHATSAPP_NUMBER = '59160103912'
+const WHATSAPP_NUMBER = '59167021196'
 
 export const sendProductWhatsApp = (
     productName: string,

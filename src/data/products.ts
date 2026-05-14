@@ -4,9 +4,9 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'Shot Coctelerito',
-    category: 'shots-mixologia',
+    category: 'cristaleria-licores',
     price: 30.00,
-    image: '/images/products/SHOT-COCTELERITO.png',
+    image: '/images/products/shot-coctelerito.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 30.00 },
       { label: '12 Unidades', value: 12, price: 60.00 },
@@ -21,9 +21,9 @@ export const products: Product[] = [
   {
     id: 2,
     name: 'Shot clasico',
-    category: 'shots-mixologia',
+    category: 'cristaleria-licores',
     price: 33.00,
-    image: '/images/products/SHOT_CLASICO.png',
+    image: '/images/products/shot-clasico.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 33.00 },
       { label: '12 Unidades', value: 12, price: 65.00 },
@@ -40,7 +40,7 @@ export const products: Product[] = [
     name: 'Vaso Mediano Piña',
     category: 'uso-diario',
     price: 53.00,
-    image: '/images/products/VASO-MEDIANO-PIÑA.png',
+    image: '/images/products/vaso-mediano-piña.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 53.00 },
       { label: '12 Unidades', value: 12, price: 105.00 },
@@ -57,7 +57,7 @@ export const products: Product[] = [
     name: 'Vaso Alto Clasico',
     category: 'uso-diario',
     price: 43.00,
-    image: '/images/products/VASO-ALTO-CLASICO.png',
+    image: '/images/products/vaso-alto-clasico.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 43.00 },
       { label: '12 Unidades', value: 12, price: 86.00 },
@@ -74,7 +74,7 @@ export const products: Product[] = [
     name: 'Vaso Ancho piña',
     category: 'uso-diario',
     price: 63.00,
-    image: '/images/products/VASO-ANCHO-PIÑA.png',
+    image: '/images/products/vaso-ancho-piña.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 63.00 },
       { label: '12 Unidades', value: 12, price: 125.00 },
@@ -91,7 +91,7 @@ export const products: Product[] = [
     name: 'Vaso Alto Cuadrado',
     category: 'uso-diario',
     price: 48.00,
-    image: '/images/products/VASO-ALTO-CUADRADO.png',
+    image: '/images/products/vaso-alto-cuadrado.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 48.00 },
       { label: '12 Unidades', value: 12, price: 95.00 },
@@ -108,7 +108,7 @@ export const products: Product[] = [
     name: 'Vaso Medio Clasico',
     category: 'uso-diario',
     price: 38.00,
-    image: '/images/products/VASO-MEDIANO-CLASICO.png',
+    image: '/images/products/vaso-mediano-clasico.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 38.00 },
       { label: '12 Unidades', value: 12, price: 75.00 },
@@ -125,7 +125,7 @@ export const products: Product[] = [
     name: 'Vaso Alto Diseño',
     category: 'uso-diario',
     price: 70.00,
-    image: '/images/products/VASO-ALTO-DISEÑO.png',
+    image: '/images/products/vaso-alto-diseño.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 70.00 },
       { label: '12 Unidades', value: 12, price: 140.00 },
@@ -139,10 +139,10 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: 'Vaso Octagonal',
+    name: 'Vaso alto Octagonal',
     category: 'uso-diario',
     price: 48.00,
-    image: '/images/products/VASO-LARGO-OCTAGONAL.png',
+    image: '/images/products/vaso-alto-octagonal.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 48.00 },
       { label: '12 Unidades', value: 12, price: 95.00 },
@@ -157,9 +157,9 @@ export const products: Product[] = [
   {
     id: 10,
     name: 'Vaso Whisky Puntas',
-    category: 'uso-diario',
+    category: 'cristaleria-licores',
     price: 65.00,
-    image: '/images/products/VASO-WHISKY-PUNTAS.png',
+    image: '/images/products/vaso-whisky-puntas.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 65.00 },
       { label: '12 Unidades', value: 12, price: 130.00 },
@@ -174,9 +174,9 @@ export const products: Product[] = [
   {
     id: 11,
     name: 'Vaso Whisky Diseño',
-    category: 'uso-diario',
+    category: 'cristaleria-licores',
     price: 63.00,
-    image: '/images/products/VASO-WHISKY-DISEÑO.png',
+    image: '/images/products/vaso-whisky-diseño.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 63.00 },
       { label: '12 Unidades', value: 12, price: 125.00 },
@@ -191,9 +191,9 @@ export const products: Product[] = [
   {
     id: 12,
     name: 'Vaso Whisky Oblicuo',
-    category: 'uso-diario',
+    category: 'cristaleria-licores',
     price: 50.00,
-    image: '/images/products/VASO-WHISKY-OBLICUO.png',
+    image: '/images/products/vaso-whisky-oblicuo.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 50.00 },
       { label: '12 Unidades', value: 12, price: 100.00 },
@@ -208,9 +208,9 @@ export const products: Product[] = [
   {
     id: 13,
     name: 'Vaso Whisky Asimetrico',
-    category: 'uso-diario',
+    category: 'cristaleria-licores',
     price: 55.00,
-    image: '/images/products/VASO-WHISKY-ASIMETRICO.png',
+    image: '/images/products/vaso-whisky-asimetrico.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 55.00 },
       { label: '12 Unidades', value: 12, price: 110.00 },
@@ -225,9 +225,9 @@ export const products: Product[] = [
   {
     id: 14,
     name: 'Vaso Whisky Rombos Abajo',
-    category: 'uso-diario',
+    category: 'cristaleria-licores',
     price: 63.00,
-    image: '/images/products/VASO-WHISKY-ROMBOS-ABAJO.png',
+    image: '/images/products/vaso-whisky-rombos-abajo.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 63.00 },
       { label: '12 Unidades', value: 12, price: 125.00 },
@@ -242,9 +242,9 @@ export const products: Product[] = [
   {
     id: 15,
     name: 'Vaso Whisy Octagonal',
-    category: 'uso-diario',
+    category: 'cristaleria-licores',
     price: 50.00,
-    image: '/images/products/VASO-WHISKY-OCTAGONAL.png',
+    image: '/images/products/vaso-whisky-octagonal.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 50.00 },
       { label: '12 Unidades', value: 12, price: 100.00 },
@@ -261,7 +261,7 @@ export const products: Product[] = [
     name: 'Copa de postre',
     category: 'postreras',
     price: 65.00,
-    image: '/images/products/COPA-DE-POSTRE.png',
+    image: '/images/products/copa-de-postre.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 65.00 },
       { label: '12 Unidades', value: 12, price: 130.00 },
@@ -278,7 +278,7 @@ export const products: Product[] = [
     name: 'Copa alta de postre',
     category: 'postreras',
     price: 85.00,
-    image: '/images/products/COPA-ALTA-DE-POSTRE.png',
+    image: '/images/products/copa-alta-de-postre.png',
     variants: [
       { label: '6 Unidades', value: 6, price: 85.00 },
       { label: '12 Unidades', value: 12, price: 170.00 },
@@ -287,6 +287,23 @@ export const products: Product[] = [
       altura: '13.3 cm',
       diametro: '9.8 cm',
       capacidad: '190 ml',
+    },
+    bestSeller: false,
+  },
+  {
+    id: 18,
+    name: 'Vaso Choppero 1',
+    category: 'uso-diario',
+    price: 80.00,
+    image: '/images/products/vaso-choppero.png',
+    variants: [
+      { label: '6 Unidades', value: 6, price: 80.00 },
+      { label: '12 Unidades', value: 12, price: 160.00 },
+    ],
+    specs: {
+      altura: '7.8 cm',
+      diametro: '13.5 cm',
+      capacidad: '398 ml',
     },
     bestSeller: false,
   },

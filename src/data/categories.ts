@@ -15,8 +15,8 @@ export const categories: Category[] = [
     },
     {
         id: 3,
-        name: 'SHOTS & MIXOLOGÍA',
-        slug: 'shots-mixologia',
+        name: 'CRISTALERIA LICORES',
+        slug: 'cristaleria-licores',
         image: '/images/shots-mix.png',
     },
 ]
